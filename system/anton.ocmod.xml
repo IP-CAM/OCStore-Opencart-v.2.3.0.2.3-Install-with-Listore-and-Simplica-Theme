@@ -6,7 +6,7 @@
   <author>OpenCart</author>            
   <link>http://jinsike.zzz.com.ua</link> 
  
-<file path="catalog/view/theme/default/template/common/header.tpl">
+<file path="catalog/view/theme/simplica/template/common/header.tpl">
   <operation>
     <search regex="true">                           
       <![CDATA[
