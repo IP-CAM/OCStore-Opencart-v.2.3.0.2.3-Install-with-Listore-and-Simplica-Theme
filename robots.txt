@@ -1,5 +1,8 @@
 User-agent: *
 Disallow: /*route=account/
+Disallow: /create-account/
+Disallow: /cart/
+Disallow: /login
 Disallow: /*route=affiliate/
 Disallow: /*route=checkout/
 Disallow: /*route=product/search
