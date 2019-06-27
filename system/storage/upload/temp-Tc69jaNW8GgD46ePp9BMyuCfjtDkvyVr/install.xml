@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>ShortCheckoutPRO</id>
+	<code>ShortCheckoutPRO</code>
+	<name>ShortCheckoutPRO</name>
+	<version>2.3</version>
+	<author>opencart2x.ru</author>
+	<link>https://opencart2x.ru</link>
+    <file path="catalog/controller/product/product.php">
+        <operation>
+            <search ><![CDATA[
+            public function index() {
+            ]]></search>
+            <add position="after"><![CDATA[
+if ($this->config->get('occm_status')) $this->document->addScript($this->url->link('extension/module/occm/js','',true));
+            ]]></add>
+        </operation>
+    </file>
+</modification>

@@ -1,0 +1,8 @@
+{
+  "name": "OpenCard_test",
+  "short_name": "OC_test",
+  "start_url": "/index.php",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#468996",
+}

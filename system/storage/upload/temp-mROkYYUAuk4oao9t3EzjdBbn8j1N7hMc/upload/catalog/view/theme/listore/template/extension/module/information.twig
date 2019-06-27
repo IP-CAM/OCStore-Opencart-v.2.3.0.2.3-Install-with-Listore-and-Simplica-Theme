@@ -1,0 +1,11 @@
+<div class="module-block">
+ <div class="informations">
+  <ul>
+    {% for information in informations %}
+    <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+    {% endfor %}
+    <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+    <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+  </ul>
+</div>
+</div>

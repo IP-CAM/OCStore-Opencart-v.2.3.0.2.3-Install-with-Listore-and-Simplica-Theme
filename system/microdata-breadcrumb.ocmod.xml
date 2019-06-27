@@ -1,0 +1,126 @@
+<modification>
+
+	<name>MICRODATA Breadcrumb</name>
+	<version>1.0</version><code>microdata-breadcrumb</code>
+	<author>DariyGRAY | email:DariyGRAY@gmail.com | skype:DariyGRAY</author>
+
+	<file path='catalog/language/russian/russian.php'>
+		<operation info='Fix for Font Awesome'>
+			<search><![CDATA[
+				<i class="fa fa-home"></i>
+			]]></search>
+			<add position='replace'><![CDATA[
+				<i class="fa fa-home"></i><span style="display:none">Главная</span>
+			]]></add>
+		</operation>
+	</file>
+	<file path='catalog/view/theme/*/template/information/*'>
+		<operation info='Breadcrumbs for Information pages'>
+			<search><![CDATA[
+				<ul class="breadcrumb">
+			]]></search>
+			<add position='replace' offset='4'><![CDATA[
+				<ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+					<?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
+						<?php if($i+1<count($breadcrumbs)){ ?>
+							<li><a itemprop="url" href="<?php echo $breadcrumb['href']; ?>"><span itemprop="title"><?php echo $breadcrumb['text']; ?></span></a></li>
+						<?php } else { ?>
+							<li><?php echo $breadcrumb['text']; ?></li>
+						<?php } ?>
+						<?php } ?>
+				</ul>
+			]]></add>
+		</operation>
+	</file>
+	<file path='catalog/view/theme/*/template/product/product.tpl'>
+		<operation info='Breadcrumbs for Product pages'>
+			<search><![CDATA[
+				<ul class="breadcrumb">
+			]]></search>
+			<add position='replace' offset='4'><![CDATA[
+				<ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+					<?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
+						<?php if($i+1<count($breadcrumbs)){ ?>
+							<li><a itemprop="url" href="<?php echo $breadcrumb['href']; ?>"><span itemprop="title"><?php echo $breadcrumb['text']; ?></span></a></li>
+						<?php } else { ?>
+							<li><?php echo $breadcrumb['text']; ?></li>
+						<?php } ?>
+					<?php } ?>
+				</ul>
+			]]></add>
+		</operation>
+	</file>
+	<file path='catalog/view/theme/*/template/product/category.tpl'>
+		<operation info='Breadcrumbs for Category page'>
+			<search><![CDATA[
+				<ul class="breadcrumb">
+			]]></search>
+			<add position='replace' offset='4'><![CDATA[
+				<ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+					<?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
+						<?php if($i+1<count($breadcrumbs)){ ?>
+							<li><a itemprop="url" href="<?php echo $breadcrumb['href']; ?>"><span itemprop="title"><?php echo $breadcrumb['text']; ?></span></a></li>
+						<?php } else { ?>
+							<li><?php echo $breadcrumb['text']; ?></li>
+						<?php } ?>
+					<?php } ?>
+				</ul>
+			]]></add>
+		</operation>
+	</file>
+	<file path='catalog/view/theme/*/template/product/manufacturer_info.tpl'>
+		<operation info='Breadcrumbs for Manufacturer Info page'>
+			<search><![CDATA[
+				<ul class="breadcrumb">
+			]]></search>
+			<add position='replace' offset='4'><![CDATA[
+				<ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+					<?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
+						<?php if($i+1<count($breadcrumbs)){ ?>
+							<li><a itemprop="url" href="<?php echo $breadcrumb['href']; ?>"><span itemprop="title"><?php echo $breadcrumb['text']; ?></span></a></li>
+						<?php } else { ?>
+							<li><?php echo $breadcrumb['text']; ?></li>
+						<?php } ?>
+					<?php } ?>
+				</ul>
+			]]></add>
+		</operation>
+	</file>
+	<file path='catalog/view/theme/*/template/product/manufacturer_list.tpl'>
+		<operation info='Breadcrumbs for Manufacturer List page'>
+			<search><![CDATA[
+				<ul class="breadcrumb">
+			]]></search>
+			<add position='replace' offset='4'><![CDATA[
+				<ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+					<?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
+						<?php if($i+1<count($breadcrumbs)){ ?>
+							<li><a itemprop="url" href="<?php echo $breadcrumb['href']; ?>"><span itemprop="title"><?php echo $breadcrumb['text']; ?></span></a></li>
+						<?php } else { ?>
+							<li><?php echo $breadcrumb['text']; ?></li>
+						<?php } ?>
+					<?php } ?>
+				</ul>
+			]]></add>
+		</operation>
+	</file>
+	<file path='catalog/view/theme/*/template/product/special.tpl'>
+		<operation info='Breadcrumbs for Special page'>
+			<search><![CDATA[
+				<ul class="breadcrumb">
+			]]></search>
+			<add position='replace' offset='4'><![CDATA[
+				<ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+					<?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
+						<?php if($i+1<count($breadcrumbs)){ ?>
+							<li><a itemprop="url" href="<?php echo $breadcrumb['href']; ?>"><span itemprop="title"><?php echo $breadcrumb['text']; ?></span></a></li>
+						<?php } else { ?>
+							<li><?php echo $breadcrumb['text']; ?></li>
+						<?php } ?>
+					<?php } ?>
+				</ul>
+			]]></add>
+		</operation>
+	</file>
+
+</modification>
